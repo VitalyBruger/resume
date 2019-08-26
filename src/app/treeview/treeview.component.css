@@ -1,0 +1,74 @@
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.main-treeview {
+  width: 300px;
+  margin: 20px;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+.expand-line {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin: 2px;
+}
+
+.section-name {
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.section-name:hover {
+  border: 1px solid var(--main-background-color-dark);;
+  border-radius: 5px;
+  background-color: var(--main-background-color-light);
+  padding: 5px;
+}
+
+.selected {
+  border: 2px solid var(--main-header-text-color);
+  border-radius: 5px;
+  background-color: var(--main-background-color-light);
+  padding: 5px;
+}
+
+.empty-line {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+
+.expand-button {
+  padding: 5px;
+  font-size: 20px;
+  margin-left: -20px;
+}
+
+.dragElement {
+  position: absolute;
+  visibility: visible;
+  opacity: 0.5;
+}
+
+.tree-bottons{
+  margin:10px;
+}

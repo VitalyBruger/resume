@@ -1,0 +1,34 @@
+<div class="list-view">
+  <table class="panel">
+    <tr class="td-header">
+      <th>{{'documentid'|translate}}</th>
+      <th>{{'documentname'|translate}}</th>
+      <th>{{'status'|translate}}</th>
+      <th>{{'details'|translate}}</th>
+    </tr>
+    <tr class="td-header">
+      <td><input type="text" [(ngModel)]="filter.Document_ID" (input)="filterInput()" size="40"></td>
+      <td><input type="text" [(ngModel)]="filter.Name" (input)="filterInput()"></td>
+      <td><input type="text" [(ngModel)]="filter.Status" (input)="filterInput()" size="4"></td>
+      <td></td>
+    </tr>
+    <tr class="td-body"   [class.inactive-element]="doc.Status==9"  *ngFor="let doc of documents">
+      <td>{{doc.Document_ID}}</td>
+      <td>{{doc.Name}}</td>
+      <td>{{doc.Status}}</td>
+      <td>
+        <div class="center">
+          <a class="swe-button-icon" [routerLink]="['/anketedit',doc.Document_ID]"><i class="fa fa-info  fa-2x" aria-hidden="true"> </i></a>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class="pagination" *ngIf="pageCount > 1">
+    <div class="page-button" [ngClass]="{'active-page-button':selectedPage==1}" (click)="changePage(1)">1</div>
+    <div class="page-button" *ngIf="selectedPage > 2" (click)="changePage(selectedPage-1)">{{selectedPage-1}}</div>
+    <div class="page-button active-page-button" *ngIf="selectedPage > 1 && selectedPage < pageCount">{{selectedPage}}</div>
+    <div class="page-button" *ngIf="selectedPage < pageCount-1" (click)="changePage(selectedPage+1)">{{selectedPage+1}}</div>
+    <div class="page-button" [ngClass]="{'active-page-button':selectedPage==pageCount}" (click)="changePage(pageCount)">{{pageCount}}</div>
+  </div>
+  <a *ngIf="isFilter()" [routerLink]="" (click)="clearFilter()">Очистити фільтр</a>
+<div>

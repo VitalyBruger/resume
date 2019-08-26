@@ -1,0 +1,25 @@
+.ankets-edit {
+  display: flex;
+  flex-direction: column;
+}
+
+.ankets-main {
+  display: flex;
+}
+
+.edit-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.ankets-details {
+  margin: 20px;
+}
+
+.button-save, .button-cansel {
+  width: 100px;
+}
+
+.edit-bottons{
+  padding-left: 20px;
+}

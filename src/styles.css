@@ -1,0 +1,191 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  //height: 100%;
+  padding:  0 5% 0 5%;
+  --main-header-text-color: #9900cc;
+  --main-text-color: #818181;
+  --main-background-color-dark: #808080;
+  --main-background-color-light:#d9d9d9;
+font: 12pt sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+app-footer {
+  flex: 0 0 auto;
+}
+
+.td-header {
+    //background-color: #e8d9ed;
+  background-color: #ebf4f6;
+}
+
+.td-body {
+  background-color: #fafafa
+}
+
+table {
+  //margin: 20px 0 20px 0;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #cacbd3;
+  padding: 10px;
+}
+
+.panel {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.panel-header {
+  background-color: #ebf4f6;
+  //background-color: #e8d9ed;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  padding-left: 20px;
+}
+
+.panel-body {
+  display: flex;
+  flex-direction: column;
+  //justify-content:stretch;
+  padding: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+a.swe-button {
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: var(--main-background-color-dark);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  outline: none;
+  border-radius: 5px;
+}
+
+/* при наведении курсора мышки */
+a.swe-button:hover {
+  background: var(--main-background-color-light);
+}
+
+a.swe-button:active {
+  background: var(--main-header-text-color);
+}
+
+.swe-button-icon {
+  //color: #06b7c2;
+  //color: rgb(197, 197, 197);
+  color:var(--main-header-text-color);
+  padding-right: 10px;
+}
+
+.info-element {
+  display: flex;
+  margin: 10px;
+}
+
+.info-label {
+  color: rgb(4, 148, 155);
+}
+
+.info-body {
+  margin-left: 20px;
+}
+
+.inactive-element {
+  background-color: rgb(223, 223, 223);
+}
+
+.modal {
+  position: fixed;
+  right: 50%;
+  top: 50%;
+  width: 300px;
+  display: block;
+  z-index: 99999999;
+  //border: 1px solid red;
+  background-color: white;
+}
+
+
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  //border-bottom: 1px dotted #ccc;
+  //color: #006080;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.5;
+}
+
+
+.tooltip-top {
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip-top::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+
+.tooltip-left {
+  top: -5px;
+  bottom: auto;
+  right: 80%;
+}
+
+.tooltip-left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #555;
+}

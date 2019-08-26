@@ -1,0 +1,21 @@
+.pagination {
+  display: flex;
+  margin:20px;
+}
+
+.page-button {
+  padding: 5px;
+  border: 1px solid  var(--main-background-color-dark);
+  width: 20px;
+  text-align: center;
+}
+
+.active-page-button {
+  padding: 5px;
+  border: 1px solid var(--main-header-text-color);
+  background-color: var(--main-background-color-light);
+}
+
+.list-view {
+  margin: 20px;
+}

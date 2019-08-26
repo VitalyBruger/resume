@@ -1,0 +1,50 @@
+<div class="section-view panel">
+  <div class="panel-header">
+    <b>{{'page'|translate}}</b>
+  </div>
+  <div class="panel-body">
+    <ng-template [ngTemplateOutlet]="loadTemplate()">
+    </ng-template>
+  </div>
+</div>
+
+<!--шаблон для читання-->
+<ng-template #readOnlyTemplate>
+  <div class="info-element">
+    <div class="info-label">{{'pageid'|translate}} : </div>
+    <div class="info-body">{{section?.Section_ID}}</div>
+  </div>
+  <div class="info-element">
+    <div class="info-label">{{'pagename'|translate}} : </div>
+    <div class="info-body">{{section?.Name}}</div>
+  </div>
+  <div class="info-element">
+    <div class="info-label">{{'status'|translate}} : </div>
+    <div class="info-body">{{section?.Status}}</div>
+  </div>
+  <a class="swe-button-icon" [routerLink]="" (click)="edit=true"><i class="fa fa-pencil-square-o  fa-2x" aria-hidden="true"> </i></a>
+</ng-template>
+
+
+<!--шаблон для редагування-->
+<ng-template #editTemplate>
+  <div class="info-element">
+    <div class="info-label">{{'pageid'|translate}} : </div>
+    <div class="info-body">{{section?.Section_ID}}</div>
+  </div>
+  <div class="info-element">
+    <div class="info-label">{{'pagename'|translate}} : </div>
+    <div class="info-body"><input type="text" [(ngModel)]="section.Name"></div>
+  </div>
+  <div class="info-element">
+    <div class="info-label">{{'status'|translate}} : </div>
+    <div class="info-body">
+      <select [(ngModel)]="section.Status">
+        <option value="2">2 - {{'active'|translate}}</option>
+        <option value="9">9 - {{'notactive'|translate}}</option>
+      </select>
+    </div>
+  </div>
+  <a class="swe-button-icon" [routerLink]="" (click)="edit=false"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"> </i></a>
+
+</ng-template>

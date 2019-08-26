@@ -1,0 +1,9 @@
+<div class="login-main ">
+  <div class="login-block panel">
+    <h2 class="login-h2"> {{'auth'|translate}} </h2>
+    <input type="text" [(ngModel)]="userName" />
+    <input type="password" [(ngModel)]="userPassword" />
+    <a class="swe-button" [routerLink]="" (click)="login()"> {{'login'|translate}}</a>
+    <span *ngIf="wrongpass" class="wrong-pass">{{'wrongpass'|translate}}</span>
+  </div>
+</div>

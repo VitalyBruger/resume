@@ -1,0 +1,17 @@
+<div class="main-menu">
+  <div class="main-menu-left">
+    <ul class="menu-ul">
+      <li routerLinkActive="menu-active"><a href="#" [routerLink]="['/aboutme']">{{'aboutme'|translate}}</a></li>
+      <li routerLinkActive="menu-active"><a href="#" [routerLink]="['/abouttest']">{{'abouttest'|translate}}</a></li>
+      <li *ngIf="user.userLogin" routerLinkActive="menu-active"><a href="#" [routerLink]="['/ankets']">{{'ankets'|translate}}</a></li>
+      <li *ngIf="!user.userLogin" routerLinkActive="menu-active"><a href="#" [routerLink]="['/login']">{{'login'|translate}}</a></li>
+      <li *ngIf="user.userLogin" routerLinkActive="menu-active"><a href="#" [routerLink]="['/logout']" (click)="logout()">{{'logout'|translate}}</a></li>
+    </ul>
+  </div>
+  <div class="main-menu-right">
+    <select [(ngModel)]="translationService.language">
+      <option value="en">Eng</option>
+      <option value="ua">Укр</option>
+    </select>
+  </div>
+</div>

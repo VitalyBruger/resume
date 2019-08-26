@@ -1,0 +1,91 @@
+<div class="ankets-edit">
+  <div class="ankets-details panel">
+    <div class="panel-header">
+      <b>{{'anket'|translate}}</b>
+    </div>
+    <div class="panel-body">
+      <ng-template [ngTemplateOutlet]="loadTemplate()">
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="ankets-main">
+    <div class="edit-left">
+      <app-treeview [sections]="document?.sections" [topSections]="null" (changeActiveSection)="changeActiveSection($event)"></app-treeview>
+
+      <div class="edit-bottons">
+
+        <div class="tooltip">
+          <a class="swe-button-icon" [routerLink]="" (click)="saveDocument()"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"> </i></a>
+          <span class="tooltiptext tooltip-top">Save</span>
+        </div>
+        <div class="tooltip">
+          <a class="swe-button-icon" [routerLink]="" (click)="canselDocument()"><i class="fa fa-ban fa-2x" aria-hidden="true"> </i></a>
+          <span class="tooltiptext tooltip-top">Cansel</span>
+        </div>
+        <div class="tooltip">
+          <a class="swe-button-icon" [routerLink]="" (click)="copyActiveSection()"><i class="fa fa-files-o fa-2x" aria-hidden="true"> </i></a>
+          <span class="tooltiptext tooltip-top">Duplicate</span>
+        </div>
+
+
+      </div>
+
+    </div>
+    <div class="edit-right">
+      <app-section [section]="getActiveSection()"></app-section>
+      <app-items [items]="getItems()" [allItems]="document?.items" [activeSection]="activeSection"></app-items>
+    </div>
+  </div>
+
+</div>
+
+<!--шаблон для читання-->
+<ng-template #readOnlyTemplate>
+  <div class="info-element">
+    <div class="info-label">{{'documentid'|translate}} : </div>
+    <div class="info-body">{{document?.Document_ID}}</div>
+  </div>
+  <div class="info-element">
+    <div class="info-label">{{'documentname'|translate}} : </div>
+    <div class="info-body">{{document?.Name}}</div>
+  </div>
+  <div class="info-element">
+    <div class="info-label">{{'status'|translate}} : </div>
+    <div class="info-body">{{document?.Status}}</div>
+  </div>
+  <a class="swe-button-icon" [routerLink]="" (click)="edit=true"><i class="fa fa-pencil-square-o  fa-2x" aria-hidden="true"> </i></a>
+</ng-template>
+
+
+<!--шаблон для редагування-->
+<ng-template #editTemplate>
+  <div class="info-element">
+    <div class="info-label">{{'documentid'|translate}} : </div>
+    <div class="info-body">{{document?.Document_ID}}</div>
+  </div>
+  <div class="info-element">
+    <div class="info-label">{{'documentname'|translate}} : </div>
+    <div class="info-body"><input type="text" [(ngModel)]="document.Name"></div>
+  </div>
+  <div class="info-element">
+    <div class="info-label">{{'status'|translate}} : </div>
+    <div class="info-body">
+      <select [(ngModel)]="document.Status">
+        <option value="2">2 - {{'active'|translate}}</option>
+        <option value="9">9 - {{'notactive'|translate}}</option>
+      </select>
+    </div>
+  </div>
+  <a class="swe-button-icon" [routerLink]="" (click)="edit=false"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"> </i></a>
+</ng-template>
+
+<div *ngIf="showSaveModal" class="modal panel">
+  <div class="panel-header">
+    <b>SWE Ankets</b>
+  </div>
+  <div class="panel-body">
+    <h3>{{modalMessage}}</h3>
+    <a class="swe-button" [routerLink]="" (click)="showSaveModal = false">Ok</a>
+  </div>
+</div>

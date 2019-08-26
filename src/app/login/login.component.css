@@ -1,0 +1,22 @@
+.login-main {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.login-block {
+  max-width: 500px;
+  height: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.login-h2 {
+  color: var(--main-header-text-color);
+}
+
+.wrong-pass {
+  color: red;
+}

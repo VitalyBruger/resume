@@ -1,0 +1,34 @@
+<div class="main-treeview noselect panel" id="mainTV">
+  <div class="panel-header">
+    <b>{{'tree'|translate}}</b>
+  </div>
+  <ul>
+    <li (mouseup)="treeMouseup(null)">
+      <div class="empty-line">
+        <div class="section-name">first level</div>
+      </div>
+    </li>
+    <ng-template #recursiveList let-sects>
+      <li #li *ngFor="let sec of sects">
+        <div class="expand-line" (mousedown)="treeMousedown(sec.Section_ID)" (mouseup)="treeMouseup(sec.Section_ID)">
+          <div *ngIf="hasChilds(sec.Section_ID)" [ngSwitch]="expand[sec.Section_ID]">
+            <div class="expand-button" *ngSwitchCase="true" (click)="onExpand(li,sec.Section_ID)">-</div>
+            <div class="expand-button" *ngSwitchCase="false" (click)="onExpand(li,sec.Section_ID)">+</div>
+            <div class="expand-button" *ngSwitchCase="null" (click)="onExpand(li,sec.Section_ID)">+</div>
+          </div>
+          <div class="section-name" [class.selected]="sec.Section_ID==selectedSection">{{sec.Name}}</div>
+        </div>
+        <ul *ngIf="hasChilds(sec.Section_ID) && expand[sec.Section_ID]">
+          <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: getChilds(sec.Section_ID) }"></ng-container>
+        </ul>
+      </li>
+    </ng-template>
+    <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: getChilds(null) }"></ng-container>
+  </ul>
+
+  <div *ngIf="dragging" class="dragElement selected" [style.top]="top" [style.left]="left"> {{getSelectedName()}}
+  </div>
+  <div class="tree-bottons">
+    <a class="swe-button-icon" [routerLink]="" (click)="addSection()"><i class="fa fa-plus  fa-2x" aria-hidden="true"> </i></a>
+  </div>
+</div>
