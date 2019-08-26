@@ -43,6 +43,19 @@ export class TranslateService {
     { word: 'elemntsort', 'en': 'Element sort order', 'ua': 'Порядок сортування' },
     { word: 'active', 'en': 'active', 'ua': 'активний' },
     { word: 'notactive', 'en': 'not active', 'ua': 'не активний' },
+    { word: 'workexperience', 'en': 'Work Experience', 'ua': 'Досвід роботи' },
+    { word: 'workperiod', 'en': 'Aug 2014 - present', 'ua': 'Серпень 2014 - по сьогодні' },
+    { word: 'ssbs', 'en': 'SoftServe Business Systems, Lviv', 'ua': 'Софтсерв Бізнес Сістем' },
+    { word: 'senior', 'en': 'Senior Business Consultant', 'ua': 'Сеньйор бізнес консультант' },
+    { word: 'responsibilities', 'en': 'Responsibilities', 'ua': 'Обов`язки' },
+    { word: 'responsibility1', 'en': 'Software implementation/customer support', 'ua': 'Впровадження ПЗ, підтримка клієнтів' },
+    { word: 'responsibility2', 'en': 'Testing mobile and web applications', 'ua': 'Тестування мобільної та веб аплікацій' },
+    { word: 'responsibility3', 'en': 'Writing SQL scripts for reports', 'ua': 'Написання SQL скриптів для звітів' },
+    { word: 'additionalskills', 'en': 'Additional Skills', 'ua': 'Додаткові навички' },
+    { word: 'languages', 'en': 'Languages', 'ua': 'Мови' },
+    { word: 'languageEN', 'en': 'English — Intermediate', 'ua': 'Англійська - середній' },
+    { word: 'languageRU', 'en': 'Russian — Fluent', 'ua': 'Російська - вільно' },
+    { word: 'languageUA', 'en': 'Ukraine — Native', 'ua': 'Українська - рідна' },
     { word: 'wrongpass', 'en': 'incorrect login or password', 'ua': 'неправильний логін або пароль' },
     { word: 'aboutphoto', 'en': 'Looking for Junior Angular developer job', 'ua': 'Шукаю роботу Junior Angular розробника' },
     { word: 'abouttestfull', 'en': `This project was implemented for educational purposes.`, 'ua': `Даний проект був реалізований в учбових цілях.` },
@@ -54,7 +67,9 @@ export class TranslateService {
     На кожній сторінці міститься набір елементів.`},
     { word: 'abouttestfull4', 'en': `The task of the project is to display the pages hierarchy and to realize the ability to change the parent object for the page by dragging the elements.`,
       'ua': `Задача проекту відображити ієрархію сторінок та реалізувати можливість зміни батьківського об'єкту для сторінки за допомогою перетягування елементів.`
-    }
+    },
+    { word: 'abouttestfull5', 'en': `The architecture of the project:`, 'ua': `Архітектура проекту:` },
+    { word: 'abouttestfull6', 'en': `Demo version`, 'ua': `Демо версія` }
   ];
   private dictionary2 = {
     'aboutme': { 'en': 'About Me', 'ua': 'Про мене' },

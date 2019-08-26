@@ -46,3 +46,7 @@ li {
   color: white;
   text-decoration: none;
 }
+
+.main-menu-right select{
+ outline-color: var(--main-background-color-dark);
+}
