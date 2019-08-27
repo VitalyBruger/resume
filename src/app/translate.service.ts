@@ -51,6 +51,8 @@ export class TranslateService {
     { word: 'responsibility1', 'en': 'Software implementation/customer support', 'ua': 'Впровадження ПЗ, підтримка клієнтів' },
     { word: 'responsibility2', 'en': 'Testing mobile and web applications', 'ua': 'Тестування мобільної та веб аплікацій' },
     { word: 'responsibility3', 'en': 'Writing SQL scripts for reports', 'ua': 'Написання SQL скриптів для звітів' },
+    { word: 'responsibility4', 'en': 'Employee mentoring', 'ua': 'Наставництво працівників' },
+    { word: 'responsibility5', 'en': 'Developing and maintaining specifications/instructions', 'ua': 'Розробка та підтримка специфікацій / інструкцій' },
     { word: 'additionalskills', 'en': 'Additional Skills', 'ua': 'Додаткові навички' },
     { word: 'languages', 'en': 'Languages', 'ua': 'Мови' },
     { word: 'languageEN', 'en': 'English — Intermediate', 'ua': 'Англійська - середній' },

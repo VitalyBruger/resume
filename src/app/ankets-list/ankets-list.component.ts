@@ -13,7 +13,7 @@ export class AnketsListComponent implements OnInit {
 
   constructor(private docServ: DocumentService, private router: Router) { }
   documents: any = [];
-  public productsPerPage = 1;
+  public productsPerPage = 10;
   public selectedPage = 1;
   public pageCount = 1;
   filter: any = {
