@@ -45,8 +45,8 @@ export class TranslateService {
     { word: 'notactive', 'en': 'not active', 'ua': 'не активний' },
     { word: 'workexperience', 'en': 'Work Experience', 'ua': 'Досвід роботи' },
     { word: 'workperiod', 'en': 'Aug 2014 - present', 'ua': 'Серпень 2014 - по сьогодні' },
-    { word: 'ssbs', 'en': 'SoftServe Business Systems, Lviv', 'ua': 'Софтсерв Бізнес Сістем' },
-    { word: 'senior', 'en': 'Senior Business Consultant', 'ua': 'Сеньйор бізнес консультант' },
+    { word: 'ssbs', 'en': 'SoftServe Business Systems, Lviv', 'ua': 'SoftServe Business Systems' },
+    { word: 'senior', 'en': 'Senior Business Consultant', 'ua': 'Senior Business Consultant' },
     { word: 'responsibilities', 'en': 'Responsibilities', 'ua': 'Обов`язки' },
     { word: 'responsibility1', 'en': 'Software implementation/customer support', 'ua': 'Впровадження ПЗ, підтримка клієнтів' },
     { word: 'responsibility2', 'en': 'Testing mobile and web applications', 'ua': 'Тестування мобільної та веб аплікацій' },
@@ -64,11 +64,11 @@ export class TranslateService {
     { word: 'abouttestfull2', 'en': `There is a set of certain documents (questionnaires).`, 'ua': `Є набір певних документів (анкет).` },
     { word: 'abouttestfull3', 'en': `Each questionnaire consists of pages.
     Pages have a hierarchical structure (tree).
-    Each page contains a set of items.`, 'ua': ` Кожна анкета склаєаться із сторінок.
+    Each page contains a set of items.`, 'ua': ` Кожна анкета складається із сторінок.
     Сторінки мають ієрархічну будову (дерево).
     На кожній сторінці міститься набір елементів.`},
     { word: 'abouttestfull4', 'en': `The task of the project is to display the pages hierarchy and to realize the ability to change the parent object for the page by dragging the elements.`,
-      'ua': `Задача проекту відображити ієрархію сторінок та реалізувати можливість зміни батьківського об'єкту для сторінки за допомогою перетягування елементів.`
+      'ua': `Задача проекту відобразити ієрархію сторінок та реалізувати можливість зміни батьківського об'єкту для сторінки за допомогою перетягування елементів.`
     },
     { word: 'abouttestfull5', 'en': `The architecture of the project:`, 'ua': `Архітектура проекту:` },
     { word: 'abouttestfull6', 'en': `Demo version`, 'ua': `Демо версія` }
