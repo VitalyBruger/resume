@@ -27,7 +27,7 @@
     "body-parser": "1.0.0",
     "cookie-parser": "^1.4.1",
     "cors": "^2.8.5",
-    "express": "~3.2.4",
+    "express": "~4.17.3",
     "express-session": "^1.13.0",
     "mssql": "^4.3.0"
   },
